@@ -40,6 +40,9 @@ class IntercomClient
     /** @var IntercomAdmins $admins */
     public $admins;
 
+    /** @var IntercomMe $me */
+    public $me;
+
     /** @var IntercomTags $tags */
     public $tags;
 
@@ -67,6 +70,7 @@ class IntercomClient
         $this->conversations = new IntercomConversations($this);
         $this->leads = new IntercomLeads($this);
         $this->admins = new IntercomAdmins($this);
+        $this->me = new IntercomMe($this);
         $this->tags = new IntercomTags($this);
         $this->segments = new IntercomSegments($this);
         $this->counts = new IntercomCounts($this);
