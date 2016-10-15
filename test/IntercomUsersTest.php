@@ -26,4 +26,12 @@ class IntercomUsersTest extends PHPUnit_Framework_TestCase {
     $events = new IntercomUsers($stub);
     $this->assertEquals('foo', $events->getUsers([]));
   }
+    public function testScrollUserGet()
+    {
+        $stub = $this->getMockBuilder('Intercom\IntercomClient')->disableOriginalConstructor()->getMock();
+        $stub->method('get')->willReturn('foo');
+
+        $events = new IntercomUsers($stub);
+        $this->assertEquals('foo', $events->getScrollUsers([]));
+    }
 }

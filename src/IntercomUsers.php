@@ -40,6 +40,11 @@ class IntercomUsers {
     return $this->client->get("users", $options);
   }
 
+    public function getScrollUsers($options)
+    {
+        return $this->client->get("users/scroll", $options);
+    }
+
   public function getUser($id, $options = [])
   {
     $path = $this->userPath($id);
