@@ -169,9 +169,9 @@ class IntercomClient
         return $this->handleResponse($response);
     }
 
-    public function nextScroll($scroll)
+    public function nextScroll($page)
     {
-        $response = $this->http_client->request('GET',"https://api.intercom.io/users/scroll/$scroll", [
+        $response = $this->http_client->request('GET',"https://api.intercom.io/users/scroll/$page", [
             'auth' => $this->getAuth(),
             'headers' => [
                 'Accept' => 'application/json'
