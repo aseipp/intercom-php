@@ -40,7 +40,7 @@ class IntercomUsers {
     return $this->client->get("users", $options);
   }
 
-    public function getScrollUsers($options)
+    public function getScrollUsers($options =[])
     {
         return $this->client->get("users/scroll", $options);
     }
